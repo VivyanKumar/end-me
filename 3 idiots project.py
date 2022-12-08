@@ -66,5 +66,7 @@ elif x == 6:
             print(list[i], "starts or ends with 'a'.")
         else:
             print(list[i], "does not start or end with 'a'.")
+elif x == 7:
+    print("Thanks for using this program!")
 else:
     print("The number must be between 1 and 7")
