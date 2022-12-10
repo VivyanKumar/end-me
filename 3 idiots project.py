@@ -23,7 +23,7 @@ while cont:
         num = int(input("Please input the number of students in your class: "))
         print(" ")
         # Names of each of the students in the list
-        names = [str(i) for i in input("Please input all the names seperating them with a comma and space (Example: Aditya, Rathiin, Vivyan)").split(", ")]
+        names = [str(i) for i in input("Please input all the names seperating them with a comma and space (Example: Aditya, Rathiin, Vivyan): ").split(", ")]
         # Checks the number of names entered is the same as the number of students initially decided
         if len(names)!=num:
             print(" ")
@@ -73,16 +73,19 @@ while cont:
                 print("The subject-wise percentage for each student is:")
                 # Prints the subject-wise percentage for each student.
                 for x, y in Mcard.items():
-                    print("{}: {}".format(x, y))
+                    print(str((f'{x}: {y}')))
+
                 print("-------------------------------------------")
                 print("The overall grade for each student is:")
                 # Prints the grades for each student.
                 for x, y in Gcard.items():
-                    print("{}: {}".format(x, y))
+                    print(str(("{}: {}".format(x, y))))
+
                 print("-------------------------------------------")
                 print("the average percentage of the entire class is: ")
                 # Calculates and prints the average percentage of the entire class.
-                print(round(sum(marks) / len(names), 2))
+                print(int((round(sum(marks) / len(names), 2))))
+
                 print("-------------------------------------------")
             # Except for the number check.
             except:
@@ -126,3 +129,4 @@ while cont:
         # If the input is not yes or no, it shows this error.
         else:
             print("The input has to be yes or no.")
+file.close()
